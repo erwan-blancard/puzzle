@@ -13,7 +13,11 @@ board_image: pygame.Surface = None
 MENU = 0
 INGAME = 1
 CUSTOMIZE = 2
-SCOREBOARD = 3
+PROFILE = 3
+SCOREBOARD = 4
+
+
+profile_name = "joueur"
 
 
 def set_state(newstate, force=False):

@@ -8,6 +8,13 @@ def draw_text(text, x, y, screen: pygame.Surface, font: pygame.font.Font, color=
     screen.blit(font.render(text, True, color), (x, y))
 
 
+def draw_text_individual(text, x, y, screen: pygame.Surface, font: pygame.font.Font, color=DEFAULT_COLOR):
+    i = 0
+    while i < len(text):
+        draw_text(text[i], x + (font.size("a")[0] * i), y, screen, font, color)
+        i += 1
+
+
 def draw_aligned_text(text, center_x, y, screen: pygame.Surface, font: pygame.font.Font, color=DEFAULT_COLOR):
     text_surface = font.render(text, True, color)
     screen.blit(text_surface, (center_x - (text_surface.get_width() / 2), y))

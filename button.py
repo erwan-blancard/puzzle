@@ -115,7 +115,6 @@ class TrueFalseButton(BaseButton):
             self.true_command()
 
 
-# 0, 188, 255
 class ButtonSliderVertical:
 
     def __init__(self, x, y, length, stroke, release_command=None):
