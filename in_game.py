@@ -22,9 +22,9 @@ class InGameState(GameState):
         self.paused = False
         # buttons for pause menu
         self.buttons = [
-            ButtonLabel("Continuer", 512 / 2 - 60, 512 / 2, 120, 48, pygame.font.Font(None, 48), command=lambda: self.close_pause_menu()),
-            ButtonLabel("Recommencer", 512 / 2 - 73, 512 / 2 + 84, 146, 48, pygame.font.Font(None, 48), command=lambda: game_state.set_custom_ingame_state(board_size, board_image)),
-            ButtonLabel("Quitter", 512 / 2 - 60, 512 / 2 + 168, 120, 48, pygame.font.Font(None, 48), command=lambda: game_state.set_state(game_state.MENU))
+            ButtonLabel("Continuer", 512 / 2 - 82, 512 / 2, 164, 48, command=lambda: self.close_pause_menu()),
+            ButtonLabel("Recommencer", 512 / 2 - 120, 512 / 2 + 84, 240, 48, command=lambda: game_state.set_custom_ingame_state(board_size, board_image)),
+            ButtonLabel("Quitter", 512 / 2 - 64, 512 / 2 + 168, 128, 48, command=lambda: game_state.set_state(game_state.MENU))
         ]
 
         piece_size = 64

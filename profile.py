@@ -10,7 +10,7 @@ class ProfileState(GameState):
     def __init__(self):
         super().__init__()
         self.buttons = [
-            ButtonLabel("Valider le nom", 512/2 - 64, 512/2 + 128, 128, 48, pygame.font.Font(None, 32), command=lambda: self.validate_name())
+            ButtonLabel("Valider le nom", 512/2 - 74, 512/2 + 128, 148, 32, command=lambda: self.validate_name())
         ]
         self.profile_name_in = game_state.profile_name
         self.warning_text = ""

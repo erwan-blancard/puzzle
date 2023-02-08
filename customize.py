@@ -23,8 +23,8 @@ class CustomizeState(GameState):
         self.buttons = [
             ButtonIcon(164-64, 256+32, 32, pygame.image.load("res/remove.png"), command=lambda: self.decrement()),
             ButtonIcon(164+32, 256+32, 32, pygame.image.load("res/add.png"), command=lambda: self.increment()),
-            ButtonLabel("Choisir une image...", 256 + 56, 256+40, 156, 24, pygame.font.Font(None, 24), command=lambda: self.ask_new_image()),
-            ButtonLabel("Jouer avec ces paramètres", 256 - 82, 512-92, 164, 32, pygame.font.Font(None, 32), command=lambda: game_state.set_custom_ingame_state(size=self.custom_board_size, img=self.custom_board_image))
+            ButtonLabel("Choisir une image...", 256 + 56, 256+40, 156, 24, command=lambda: self.ask_new_image()),
+            ButtonLabel("Jouer avec ces paramètres", 256 - 280/2, 512-92, 280, 32, command=lambda: game_state.set_custom_ingame_state(size=self.custom_board_size, img=self.custom_board_image))
         ]
 
     def increment(self):
